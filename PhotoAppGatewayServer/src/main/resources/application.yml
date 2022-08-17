@@ -1,0 +1,12 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8010/eureka/
+
+  instance:
+    hostname: localhost
+spring:
+  main:
+    web-application-type: reactive
