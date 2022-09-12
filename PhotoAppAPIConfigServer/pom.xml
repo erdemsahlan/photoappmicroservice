@@ -5,28 +5,22 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.2</version>
+		<version>2.7.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.parentmodule</groupId>
-	<artifactId>ParentModule</artifactId>
+	<groupId>com.appdeveloperblog.photoapp.api</groupId>
+	<artifactId>PhotoAppAPIConfigServer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ParentModule</name>
-	<description>Microservices</description>
+	<name>PhotoAppAPIConfigServer</name>
+	<description>PhotoAppAPIConfigServer</description>
 	<properties>
-		<java.version>18</java.version>
+		<java.version>17</java.version>
+		<spring-cloud.version>2021.0.4</spring-cloud.version>
 	</properties>
-	<modules>
-		<module>PhotoAppApiAccountManagement</module>
-		<module>PhotoAppApiUsers</module>
-		<module>PhotoAppDiscoveryService</module>
-		<module>PhotoAppGatewayServer</module>
-		<module>PhotoAppAPIConfigServer</module>
-	</modules>
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 
 		<dependency>
@@ -35,6 +29,17 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
