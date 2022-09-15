@@ -6,6 +6,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
 @EnableConfigServer
+
 public class PhotoAppApiConfigServerApplication {
 
 	public static void main(String[] args) {
