@@ -22,6 +22,7 @@
 		<module>PhotoAppDiscoveryService</module>
 		<module>PhotoAppGatewayServer</module>
 		<module>PhotoAppAPIConfigServer</module>
+		<module>PhotoAppApiAlbums</module>
 	</modules>
 	<dependencies>
 		<dependency>
